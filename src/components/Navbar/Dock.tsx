@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Link from "next/link";
 import {
   CalendarIcon,
@@ -6,7 +7,9 @@ import {
   HomeIcon,
   MailIcon,
   PencilIcon,
+  Check,
 } from "lucide-react";
+import { useToast } from "../ui/use-toast";
 
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
@@ -17,7 +20,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { Dock, DockIcon } from "@/components/magicui/dock";
+import { Dock, DockIcon } from "@/components/ui/dock";
 import { ModeToggle } from "./Mode";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
@@ -69,7 +72,6 @@ const Icons = {
 const DATA = {
   navbar: [
     { href: "#", icon: HomeIcon, label: "Home" },
-    { href: "#", icon: FileCode, label: "Resume" },
   ],
   contact: {
     social: {
@@ -88,19 +90,34 @@ const DATA = {
         url: "https://x.com/ojassinghh",
         icon: Icons.x,
       },
-      email: {
-        name: "Send Email",
-        url: "mailto:ojas.singh02@gmail.com",
-        icon: Icons.email,
-      },
+      // email: {
+      //   name: "Send Email",
+      //   url: "mailto:ojas.singh02@gmail.com",
+      //   icon: Icons.email,
+      // },
     },
   },
 };
 
 export function DockDemo() {
+  const { toast } = useToast();
+  const [check, setCheck] = useState(false);
+
+  const handleCopy = () => {
+    setCheck(true);
+    navigator.clipboard.writeText("");
+    toast({
+      title: "Email Copied!",
+      description: "Shoot me a message.",
+    });
+    setTimeout(() => {
+      setCheck(false);
+    }, 500);
+  };
+
   return (
     <TooltipProvider>
-      <Dock direction="middle">
+      <Dock direction="middle" className="z-[902]">
         {DATA.navbar.map((item) => (
           <DockIcon key={item.label}>
             <Tooltip>
@@ -121,6 +138,25 @@ export function DockDemo() {
             </Tooltip>
           </DockIcon>
         ))}
+        <DockIcon>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Link
+                  href="pdf/Ojas_Singh_resume.pdf"
+                  className={cn(
+                    buttonVariants({ variant: "ghost", size: "icon" }),
+                    "size-12 rounded-full"
+                  )}
+                  target="_blank"
+                >
+                  <FileCode className="size-4" />
+                </Link>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Resume</p>
+              </TooltipContent>
+            </Tooltip>
+          </DockIcon>
         <Separator orientation="vertical" className="h-full" />
         {Object.entries(DATA.contact.social).map(([name, social]) => (
           <DockIcon key={name}>
@@ -143,6 +179,28 @@ export function DockDemo() {
             </Tooltip>
           </DockIcon>
         ))}
+        <DockIcon>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <button
+                onClick={handleCopy}
+                className={cn(
+                  buttonVariants({ variant: "ghost", size: "icon" }),
+                  "size-12 rounded-full"
+                )}
+              >
+                {check ? (
+                  <Check className="size-4" />
+                ) : (
+                  <Icons.email className="size-4" />
+                )}
+              </button>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Copy email</p>
+            </TooltipContent>
+          </Tooltip>
+        </DockIcon>
         <Separator orientation="vertical" className="h-full py-2" />
         <DockIcon>
           <Tooltip>
