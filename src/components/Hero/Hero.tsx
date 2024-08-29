@@ -4,7 +4,8 @@ import grain from "@/../public/grain.jpg";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import face from "@/../public/face.jpeg";
+import face from "@/../public/face5.jpeg";
+import BlurFade from "../ui/blur-fade";
 
 export default function Hero() {
   return (
@@ -60,37 +61,49 @@ export default function Hero() {
       </motion.div>
       <div className="flex items-start gap-10 place-content-center">
         <div className="grid gap-2">
-          <motion.h1
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-7xl h-20 tracking-tight z-10 font-semibold bg-clip-text text-left text-black dark:text-white"
-          >
-            Hi, I'm Ojas
-            <span className="text-yellow-500 ml-4 text-6xl">👋</span>
-          </motion.h1>
-          <motion.h3
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.35 }}
-            className="text-xl text-left max-w-md mx-auto tracking-tight dark:text-slate-400 text-slate-700  z-10"
-          >
-            Student and software engineer based in Toronto. I love working on
-            scaleable and impactful projects. Hit me up to collaborate!
-          </motion.h3>
+          <BlurFade delay={0.2} inView>
+            <motion.h1
+              // initial={{ opacity: 0, y: 50 }}
+              // animate={{ opacity: 1, y: 0 }}
+              // transition={{ duration: 0.7, delay: 0.2 }}
+              className="text-7xl h-20 tracking-tight z-10 font-semibold bg-clip-text text-left text-black dark:text-white"
+            >
+              Hi, I'm Ojas
+              <motion.span
+                whileHover={{ rotate: 15 }}
+                transition={{ duration: 0.7 }}
+                className="ml-4 text-6xl duration-300"
+              >
+                👋
+              </motion.span>
+            </motion.h1>
+          </BlurFade>
+          <BlurFade delay={0.3} inView>
+            <motion.h3
+              // initial={{ opacity: 0, y: 50 }}
+              // animate={{ opacity: 1, y: 0 }}
+              // transition={{ duration: 0.7, delay: 0.35 }}
+              className="text-xl text-left max-w-md mx-auto tracking-tight dark:text-slate-400 text-slate-700  z-10"
+            >
+              Student and software engineer in Toronto 📍 <br /> I love working
+              on scaleable and impactful projects. Hit me up to collaborate!
+            </motion.h3>
+          </BlurFade>
         </div>
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-          className="z-[5]"
-        >
-          <Image
-            alt="ojas singh"
-            className="size-40 rounded-full inline-flex z-[5] object-cover"
-            src={face}
-          />
-        </motion.div>
+        <BlurFade delay={0.2} inView>
+          <motion.div
+            // initial={{ opacity: 0, y: 50 }}
+            // animate={{ opacity: 1, y: 0 }}
+            // transition={{ duration: 0.7, delay: 0.2 }}
+            className="z-[5] relative"
+          >
+            <Image
+              alt="ojas singh"
+              className="size-44 rounded-full inline-flex z-[5] object-cover"
+              src={face}
+            />
+          </motion.div>
+        </BlurFade>
       </div>
       <motion.div
         initial={{ opacity: 0, y: 50 }}
