@@ -82,7 +82,7 @@ export default function Projects() {
         },
       ],
       image: "",
-      video: "https://cdn.broadcast-app.com/chat-demo.mp4",
+      // video: "https://cdn.broadcast-app.com/chat-demo.mp4",
     },
     {
       title: "Sentiment Analysis Blog",
@@ -100,7 +100,7 @@ export default function Projects() {
         },
       ],
       image: "",
-      video: "https://cdn.sentiment-analysis.com/toxicity-check-demo.mp4",
+      // video: "https://cdn.sentiment-analysis.com/toxicity-check-demo.mp4",
     },
   ];
 
@@ -109,14 +109,14 @@ export default function Projects() {
       <div className="space-y-12 w-full py-12">
         <BlurFade delay={BLUR_FADE_DELAY * 11}>
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="space-y-2">
+            <div className="space-y-4">
               <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
                 Projects
               </div>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+              <h2 className="text-2xl font-bold tracking-tighter sm:text-5xl">
                 Some of my work
               </h2>
-              <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed max-w-2xl">
+              <p className="text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed max-w-2xl">
                 I am constantly building and trying to learn new concepts. Here are a few projects that I had fun building.
               </p>
             </div>
