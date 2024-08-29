@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import face from "@/../public/face5.jpeg";
 import BlurFade from "../ui/blur-fade";
+import { ChevronDown } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -111,10 +112,10 @@ export default function Hero() {
         transition={{ duration: 0.7, delay: 0.5 }}
         className="flex place-items-center gap-4 mx-auto mt-4 z-10"
       >
-        <Link href="">
+        <Link href="/#about">
           <button className="rounded-lg flex gap-2 items-center mx-auto  px-4 py-2 outline outline-1 outline-white/10 shadow-blue-600">
             <div></div>
-            <span>Explore work</span>
+            <span className="flex items-center gap-1">More about me <ChevronDown className="size-4"/></span>
           </button>
         </Link>
         <Link href="">

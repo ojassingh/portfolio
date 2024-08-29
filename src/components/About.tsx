@@ -4,7 +4,7 @@ import BlurFade from "./ui/blur-fade";
 export default function About() {
   return (
     <BlurFade inView>
-      <div className="max-w-2xl mx-auto grid gap-1">
+      <div id="about" className="max-w-2xl mx-auto grid gap-1 pt-20 -mt-20">
         <h1 className="text-2xl text-white font-semibold">About</h1>
         <p className="text-base text-slate-400">
           I am a 4th-year undergraduate at the <span className="text-white underline">University of Toronto</span>, completing the Computer Science, Mathematics, and Statistics program. I taught

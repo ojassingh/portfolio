@@ -14,7 +14,7 @@ export default function Projects() {
       dates: "July 2023 - Present",
       active: true,
       description:
-        "Built and deployed an AI resume-crafting SaaS for software engineering positions. Integrated Langchain and Pinecone to enhance search and retrieval capabilities, allowing for intelligent document processing.",
+        "An AI SaaS that helps people create resumes specifically for engineering or technical positions. ",
       technologies: [
         "Typescript",
         "Next.js",
@@ -40,7 +40,7 @@ export default function Projects() {
       dates: "March 2023 - June 2023",
       active: true,
       description:
-        "Engineered an AI dashboard via Next.js and OpenAI, aggregating real-time data of 5000+ stock indices. Utilized Prisma and MySQL to manage data for 200+ mock users, with React for visualization.",
+        "Engineered an AI dashboard aggregating real-time data of 5000+ stock indices.",
       technologies: [
         "Typescript",
         "React",
@@ -65,7 +65,7 @@ export default function Projects() {
       dates: "January 2023 - March 2023",
       active: true,
       description:
-        "Architected a real-time chatting application in Go and Typescript, utilizing Next.js, websockets, and Gin. Performed thorough end-to-end tests with Cypress to attain 90%+ test coverage.",
+        "Architected a real-time chatting application in Go and Typescript, utilizing Next.js, websockets, and Gin.",
       technologies: [
         "Go",
         "Gin",
@@ -90,7 +90,7 @@ export default function Projects() {
       dates: "October 2022 - December 2022",
       active: true,
       description:
-        "Built an application in Typescript using Tensorflow.js, Next.js, and AWS Amplify and S3 for sentiment analysis. Utilized Tensorflow.js's text toxicity model to improve content safety, offering toxic and obscenity probabilities.",
+        "An app for sentiment analysis of blog posts. Used Tensorflow.js's toxicity model to get tone probabilities.",
       technologies: ["Typescript", "Tensorflow", "React", "GraphQL", "AWS"],
       links: [
         {
@@ -111,14 +111,13 @@ export default function Projects() {
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
               <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                My Projects
+                Projects
               </div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                Check out my latest work
+                Some of my work
               </h2>
               <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed max-w-2xl">
-                I&apos;ve worked on a variety of projects, from simple websites
-                to complex web applications. Here are a few of my favorites.
+                I am constantly building and trying to learn new concepts. Here are a few projects that I had fun building.
               </p>
             </div>
           </div>
@@ -139,6 +138,7 @@ export default function Projects() {
                 image={project.image}
                 video={project.video}
                 links={project.links}
+                className=""
               />
             </BlurFade>
           ))}
