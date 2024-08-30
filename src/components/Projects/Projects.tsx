@@ -35,6 +35,15 @@ export default function Projects() {
       video: "https://utfs.io/f/626698f7-ce57-4858-9373-3d6de20e0d98-onf3pg.mov",
     },
     {
+      title: "Mruda.dev (coming soon)",
+      dates: "June 2023 - Present",
+      active: true,
+      description:
+        "Boilerplate code to help founders get started and scale quick.",
+      technologies: ["Typescript", "Next.js", "shad/cn", "TailwindCSS"],
+      video: "https://utfs.io/f/fb75bd7e-6ada-4ffe-8c37-99516af6810a-ho0ida.mov"
+    },
+    {
       title: "AI Finance Dashboard",
       href: "https://github.com/ojassingh/finance-dashboard",
       dates: "March 2023 - June 2023",
@@ -57,7 +66,7 @@ export default function Projects() {
         },
       ],
       image: "",
-      video: "https://cdn.finance-dashboard.com/stock-aggregation.mp4",
+      // video: "https://cdn.finance-dashboard.com/stock-aggregation.mp4",
     },
     {
       title: "Broadcast - A Social Media App",
@@ -102,6 +111,24 @@ export default function Projects() {
       image: "",
       // video: "https://cdn.sentiment-analysis.com/toxicity-check-demo.mp4",
     },
+    {
+      title: "SpaceNews",
+      href: "",
+      dates: "August 2022 - October 2022",
+      active: false,
+      description:
+        "A simple news aggregator for space enthusiasts. My first project using Next.js.",
+      technologies: ["Typescript", "Next.js", "TailwindCSS"],
+      image: "",
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/ojassingh/astronews",
+          icon: <Github className="size-3" />,
+        }
+      ]
+
+    }
   ];
 
   return (
