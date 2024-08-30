@@ -12,9 +12,9 @@ export default function Hero() {
   return (
     <div
       id="home"
-      className="grid place-content-center items-center h-screen gap-4 relative"
+      className="grid place-content-center items-center h-screen gap-4 relative px-4"
     >
-      <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
+      <div className="hidden sm:absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
         <div
           className="absolute inset-0 -z-30 opacity-5"
           style={{
@@ -60,20 +60,20 @@ export default function Hero() {
         </div>
         <p>Open to work</p>
       </motion.div>
-      <div className="flex items-start gap-10 place-content-center">
+      <div className="flex flex-wrap-reverse items-start gap-10 place-content-center">
         <div className="grid gap-2">
           <BlurFade delay={0.2} inView>
             <motion.h1
               // initial={{ opacity: 0, y: 50 }}
               // animate={{ opacity: 1, y: 0 }}
               // transition={{ duration: 0.7, delay: 0.2 }}
-              className="text-7xl h-20 tracking-tight z-10 font-semibold bg-clip-text text-left text-black dark:text-white"
+              className="text-5xl sm:text-7xl h-20 tracking-tight z-10 font-semibold bg-clip-text text-center sm:text-left text-black dark:text-white"
             >
               Hi, I'm Ojas
               <motion.span
                 whileHover={{ rotate: 15 }}
                 transition={{ duration: 0.7 }}
-                className="ml-4 text-6xl duration-300"
+                className="ml-4 text-5xl sm:text-6xl duration-300"
               >
                 👋
               </motion.span>
@@ -84,7 +84,7 @@ export default function Hero() {
               // initial={{ opacity: 0, y: 50 }}
               // animate={{ opacity: 1, y: 0 }}
               // transition={{ duration: 0.7, delay: 0.35 }}
-              className="text-xl text-left max-w-md mx-auto tracking-tight dark:text-slate-400 text-slate-700  z-10"
+              className="sm:text-xl text-base text-center sm:text-left max-w-md mx-auto tracking-tight dark:text-slate-400 text-slate-700  z-10"
             >
               Student and software engineer in Toronto 📍 <br /> I love working
               on scaleable and impactful projects. Hit me up to collaborate!
@@ -115,7 +115,9 @@ export default function Hero() {
         <Link href="/#about">
           <button className="rounded-lg flex gap-2 items-center mx-auto  px-4 py-2 outline outline-1 outline-white/10 shadow-blue-600">
             <div></div>
-            <span className="flex items-center gap-1">More about me <ChevronDown className="size-4"/></span>
+            <span className="flex items-center gap-1">
+              More about me <ChevronDown className="size-4" />
+            </span>
           </button>
         </Link>
         <Link href="">

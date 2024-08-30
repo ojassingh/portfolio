@@ -34,7 +34,7 @@ export default function Education() {
   ]
   const BLUR_FADE_DELAY = 0.04;
   return (
-    <div className="grid max-w-2xl mx-auto pt-10 ">
+    <div className="grid max-w-2xl mx-auto pt-10 px-6">
       <section id="education">
         <div className="flex min-h-0 flex-col gap-y-3 ">
           <BlurFade delay={BLUR_FADE_DELAY * 7}>
@@ -44,7 +44,7 @@ export default function Education() {
             <BlurFade
               key={education.school}
               delay={BLUR_FADE_DELAY * 8 + id * 0.05}
-              className="bg-black"
+              className="bg-white dark:bg-black"
             >
               <ResumeCard
                 key={education.school}

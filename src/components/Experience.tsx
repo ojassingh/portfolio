@@ -57,7 +57,7 @@ export default function Experience() {
   
 
   return (
-    <section id="work" className="max-w-2xl mx-auto grid pt-10">
+    <section id="work" className="max-w-2xl mx-auto grid pt-10 px-6">
       <div className="flex min-h-0 flex-col gap-y-3">
         <BlurFade delay={BLUR_FADE_DELAY * 5}>
           <h2 className="text-xl font-bold">Work Experience</h2>

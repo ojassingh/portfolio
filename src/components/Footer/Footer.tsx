@@ -75,20 +75,20 @@ export default function Footer() {
   };
 
   return (
-    <footer className="sticky top-[100vh] bg-black rounded-3xl max-w-7xl mx-auto px-20 py-12 mb-10">
-      <hr className="border-t border-slate-800" />
-      <div className="flex flex-wrap text-slate-500 justify-between pt-6">
+    <footer className="sticky top-[100vh] dark:bg-black bg-white rounded-3xl max-w-7xl mx-auto px-20 py-12 mb-10">
+      <hr className="border-t dark:border-slate-800 border-slate-300" />
+      <div className="flex flex-wrap gap-6 text-slate-500 justify-between pt-6">
         <div className="grid gap-2">
           <p>Version</p>
-          <p className="text-white">2024 ©️ ojassingh</p>
+          <p className="dark:text-white text-black">2024 ©️ ojassingh</p>
         </div>
         <div className="grid gap-2">
           <p>Local time</p>
-          <p className="text-white">Version 2024 ©️ ojassingh</p>
+          <p className="dark:text-white text-black">Version 2024 ©️ ojassingh</p>
         </div>
         <div className="grid gap-2">
           <p>Socials</p>
-          <div className="flex gap-2 items-center text-white">
+          <div className="flex gap-2 items-center dark:text-white text-black">
             <Link href="https://www.linkedin.com/in/ojas-singh/" target="_blank" className="flex gap-1 items-center">
               <Linkedin className="size-4" /> LinkedIn
             </Link>
