@@ -14,7 +14,7 @@ export default function Hero() {
       id="home"
       className="grid place-content-center items-center h-screen gap-4 relative px-4"
     >
-      <div className="hidden sm:absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
+      <div className="hidden sm:block absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
         <div
           className="absolute inset-0 -z-30 opacity-5"
           style={{
