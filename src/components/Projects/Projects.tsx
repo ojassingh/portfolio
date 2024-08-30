@@ -32,7 +32,7 @@ export default function Projects() {
         },
       ],
       image: "",
-      video: "https://cdn.sweresume.com/ai-resume-demo.mp4",
+      video: "https://utfs.io/f/626698f7-ce57-4858-9373-3d6de20e0d98-onf3pg.mov",
     },
     {
       title: "AI Finance Dashboard",
