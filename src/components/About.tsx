@@ -5,7 +5,7 @@ export default function About() {
   return (
     <BlurFade inView>
       <div id="about" className="max-w-2xl mx-auto grid gap-1 sm:pt-20 -mt-20 px-6">
-        <h1 className="text-2xl dark:text-white text-black font-semibold">About</h1>
+        <h1 className="text-xl dark:text-white text-black font-semibold">About</h1>
         <p className="text-base dark:text-slate-400 text-slate-500">
           I am a 4th-year undergraduate at the <span className="dark:text-white text-black underline">University of Toronto</span>, completing the Computer Science, Mathematics, and Statistics program. I taught
           myself full-stack development in 2021, and found a deep passion

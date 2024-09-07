@@ -4,7 +4,7 @@ import grain from "@/../public/grain.jpg";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import face from "@/../public/face5.jpeg";
+import face from "@/../public/face6.jpeg";
 import BlurFade from "../ui/blur-fade";
 import { ChevronDown } from "lucide-react";
 
@@ -60,14 +60,14 @@ export default function Hero() {
         </div>
         <p>Open to work</p>
       </motion.div>
-      <div className="flex flex-wrap-reverse items-start gap-10 place-content-center">
+      <div className="flex flex-wrap-reverse items-center gap-10 place-content-center">
         <div className="grid gap-2">
           <BlurFade delay={0.2} inView>
             <motion.h1
               // initial={{ opacity: 0, y: 50 }}
               // animate={{ opacity: 1, y: 0 }}
               // transition={{ duration: 0.7, delay: 0.2 }}
-              className="text-5xl sm:text-7xl h-20 tracking-tight z-10 font-semibold bg-clip-text text-center sm:text-left text-black dark:text-white"
+              className="text-5xl sm:text-7xl tracking-tight z-10 font-semibold bg-clip-text text-center sm:text-left text-black dark:text-white"
             >
               Hi, I'm Ojas
               <motion.span
@@ -100,7 +100,7 @@ export default function Hero() {
           >
             <Image
               alt="ojas singh"
-              className="size-44 rounded-full inline-flex z-[5] object-cover"
+              className="size-56 rounded-3xl inline-flex z-[5] object-cover"
               src={face}
             />
           </motion.div>
